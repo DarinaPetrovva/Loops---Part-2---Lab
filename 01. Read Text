@@ -1,0 +1,19 @@
+using System;
+
+namespace demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string word = Console.ReadLine();
+            int cnt = 0;
+            while (word != "Stop")
+            {
+                cnt++;
+                word = Console.ReadLine();
+            }
+            Console.WriteLine(cnt);
+        }
+    }
+}
