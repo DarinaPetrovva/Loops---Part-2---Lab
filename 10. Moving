@@ -1,0 +1,50 @@
+using System;
+
+ 
+namespace _4.Moving
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1. Read Input
+            int freeSpaceWidth = int.Parse(Console.ReadLine());
+            int freeSpaceLength = int.Parse(Console.ReadLine());
+            int freeSpaceHeight = int.Parse(Console.ReadLine());
+            string command = Console.ReadLine();
+ 
+            //2. Manipulate Data
+            int roomVolume = freeSpaceWidth * freeSpaceLength * freeSpaceHeight;
+            bool isThereEnoughSpace = true;
+ 
+            while (command != "Done")
+            {
+                //1.2 Read Input
+                int boxes = int.Parse(command);
+ 
+                //2.2 Manipulate Data
+                roomVolume -= boxes;
+ 
+                if (roomVolume < 0 )
+                {
+                    isThereEnoughSpace = false;
+                    break;
+                }
+ 
+                command = Console.ReadLine();
+            }
+ 
+            //3. Print Result
+ 
+            if (isThereEnoughSpace)
+            {
+                Console.WriteLine($"{roomVolume} Cubic meters left.");
+            }
+            else
+            {
+                Console.WriteLine($"No more free space! You need {Math.Abs(roomVolume)} Cubic meters more.");
+            }
+ 
+        }
+    }
+}
