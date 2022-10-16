@@ -1,0 +1,23 @@
+using System;
+
+namespace demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numscnt = int.Parse(Console.ReadLine());
+            int min = int.MaxValue;
+            for (int cnt = 0; cnt < numscnt; cnt++)
+            {
+                int number = int.Parse(Console.ReadLine());
+                if (number < min)
+                {
+                    min = number;
+                }
+            }
+            Console.WriteLine(min);
+            
+        }
+    }
+}
