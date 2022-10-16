@@ -1,0 +1,35 @@
+using System;
+
+ 
+namespace _06.Account_Balance
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N = int.Parse(Console.ReadLine());
+            int S = 0;
+            double B = 0.0;
+ 
+            while (S < N)
+            {
+                double T = double.Parse(Console.ReadLine());
+                if (T < 0)
+                {
+                    Console.WriteLine("Invalid operation!");
+                    break;
+ 
+                }
+                else
+                {
+                    B += T;
+                    Console.WriteLine($"Increase: {T:F2}");
+                }
+                S++;
+ 
+            }
+            Console.WriteLine($"Total: {B:F2}");
+ 
+        }
+    }
+}
