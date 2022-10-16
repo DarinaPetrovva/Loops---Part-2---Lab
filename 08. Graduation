@@ -1,0 +1,32 @@
+using System;
+
+namespace SandBox
+{
+    
+
+    public class EntryPoint
+    {
+        public static void Main()
+        {
+
+            string nameOfStudent = Console.ReadLine();
+            double graduationMarks = 1;
+            double totalSum = 0.0;
+
+            while (graduationMarks <= 12)
+            {
+                double mark = double.Parse(Console.ReadLine());
+
+                if (mark >= 4.0D)
+                {
+                    graduationMarks++;
+                    totalSum += mark;
+                }
+            }
+
+            double avgSum = totalSum / 12;
+
+            Console.WriteLine($"{nameOfStudent} graduated. Average grade: {avgSum:F2}");
+        }
+    }
+}
